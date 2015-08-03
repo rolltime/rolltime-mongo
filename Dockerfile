@@ -6,5 +6,8 @@ FROM mongo:latest
 
 MAINTAINER Luis Capelo <luiscape@gmail.com>
 
-EXPOSE 6000
+# Download latest configuration script.
+RUN wget https://raw.githubusercontent.com/rolltime/rolltime-mongo/master/bin/configure.sh
+
+EXPOSE 6001
 CMD ["mongod"]
